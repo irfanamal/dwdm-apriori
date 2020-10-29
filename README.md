@@ -4,7 +4,7 @@ Ini masih plan sementara, tergantung nanti bentuk datasetnya dan kejadian tidak 
 - loadData(filename)-->dataframe {baca file terus jadiin pandas dataframe}
 - toOneHot(dataframe)-->dataframe {in case datanya multivalue, bikin one hot biar gampang kedepannya}
 ## Cleaning
-- clearMissingValues(dataframe)-->dataframe {hapus missing value dari dataset}
+- cleanValues(dataframe)-->dataframe {bersihin data misal ada barang yg typo}
 ## Apriori
 - generateCombination(list_items,banlist,level)-->list_kombinasi (generate kombinasi berukuran level dari list items dengan pengecualian kombinasi yang berisi subset salah satu banlist)
 - countItems(dataframe,list_kombinasi)-->list_kemunculan {hitung jumlah kemunculan member kombinasi pada dataframe}
