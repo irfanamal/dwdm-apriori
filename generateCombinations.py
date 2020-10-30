@@ -1,0 +1,1 @@
+def generateCombinations(list_items, banlist, level):
