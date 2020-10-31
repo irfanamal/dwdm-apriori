@@ -1,6 +1,4 @@
 import itertools
-# import preprocessing
-# from getUnique import getUnique
 
 def generateCombination(list_items,banlist,level):
     list_kombinasi = list(itertools.combinations(list_items,level))
@@ -63,14 +61,4 @@ def mainApriori(dataframe,banlist,level,list_items,threshold):
             else:
                 list_items = getUniqueItems(list_kombinasi_2)
                 banlist = banlist + list_infrequent
-                # print(len(banlist))
-                # print(level, len(list_kombinasi), len(list_kombinasi_2), len(list_items))
                 return mainApriori(dataframe, banlist, level+1, list_items, threshold)
-        
-# df = preprocessing.loadData('Dataset/Market_Basket_Optimisation_Clean.csv')
-# list_items = getUnique(df)
-# df = preprocessing.toOneHot(df)
-#
-# list_kombinasi = mainApriori(df, None, 1, list_items, 25)
-# print(len(list_kombinasi))
-# print(list_kombinasi)
