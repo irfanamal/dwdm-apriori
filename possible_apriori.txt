@@ -1,0 +1,2 @@
+23, [('spaghetti', 'frozen vegetables', 'milk', 'mineral water', 'chocolate')]
+34, [('chocolate', 'spaghetti', 'milk', 'mineral water')]
