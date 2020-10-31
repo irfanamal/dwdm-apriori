@@ -63,14 +63,17 @@ def mainApriori(dataframe,banlist,level,list_items,threshold):
             else:
                 list_items = getUniqueItems(list_kombinasi_2)
                 banlist = banlist + list_infrequent
-                # print(len(banlist))
-                # print(level, len(list_kombinasi), len(list_kombinasi_2), len(list_items))
+                print(level, len(list_kombinasi), len(list_kombinasi_2), len(list_items))
                 return mainApriori(dataframe, banlist, level+1, list_items, threshold)
         
-df = preprocessing.loadData('Dataset/Market_Basket_Optimisation_Clean.csv')
-list_items = getUnique(df)
-df = preprocessing.toOneHot(df)
+#df = preprocessing.loadData('Dataset/Market_Basket_Optimisation_Clean.csv')
+#list_items = getUnique(df)
+#df = preprocessing.toOneHot(df)
 
-list_kombinasi = mainApriori(df, None, 1, list_items, 48)
-print(len(list_kombinasi))
-print(list_kombinasi)
+#for i in range(100):
+#    list_kombinasi = mainApriori(df, None, 1, list_items, i)
+#    print(len(list_kombinasi))
+#    print(list_kombinasi)
+#    if list_kombinasi:
+#        with open('possible_threhold.txt','a+') as f:
+#            f.write("{}, {}\n".format(str(i),str(list_kombinasi)))
