@@ -36,5 +36,5 @@ def countSupportConfidence(rules, df):
     return rules
 
 def findAssociation(rules,threshold_support,threshold_confidence):
-  assoc_rules = rules.loc[(rules['confidence'] > threshold_confidence) & (rules['support X'] > threshold_support)]
+  assoc_rules = rules.loc[(rules['confidence'] >= threshold_confidence) & (rules['support X'] >= threshold_support)]
   return assoc_rules
